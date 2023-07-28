@@ -1,6 +1,289 @@
-*{
+:root {
+    --pink: rgba(185, 4, 112, 1);
+    --gray: rgba(52, 58, 62, 1);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
     list-style: none;
+    font-family: 'Poppins', 'sans-serif';
 }
+
+h1,
+h2 {
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.container {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.btn {
+    background-color: var(--pink);
+    color: #fff;
+    padding: 10px 30px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--pink);
+    box-shadow: 0 0 10px var(--pink);
+    color: #000;
+}
+
+/* header start*/
+
+header {
+    background-color: var(--pink);
+    color: white;
+    padding: 20px 0;
+}
+
+.header-left * {
+    font-size: 12px;
+}
+
+.header-left {
+    gap: 20px;
+}
+
+.header-left a:hover {
+    text-decoration: underline;
+}
+
+.header-right {
+    gap: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-right a svg {
+    width: 16px;
+    height: 16px;
+}
+
+.header-right a:hover {
+    box-shadow: 0 0 10px white;
+    border-radius: 50%;
+}
+
+/* header end */
+
+/* nav start */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/hero.png);
+    padding: 60px 0;
+    background-position: center;
+}
+
+.navbar {
+    background-color: #fff;
+    height: 70px;
+    padding: 0 50px;
+    border-radius: 4px;
+}
+
+.navigation {
+    gap: 30px;
+}
+
+.navigation .link {
+    color: var(--gray);
+    position: relative;
+}
+
+.navigation .link::after {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: var(--pink);
+    position: absolute;
+    bottom: -3px;
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.320, 1);
+    left: 0;
+}
+
+.navigation .link:hover::after {
+    width: 100%;
+}
+
+/* slogan */
+
+main .slogan {
+    color: #fff;
+    gap: 50px;
+}
+
+.slogan .slogan-title {
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.slogan .slogan-title2 {
+    font-size: 32px;
+}
+
+main .slogan p {
+    line-height: 25px;
+    width: 58ch;
+    text-align: justify;
+}
+
+.slogan-btn {
+    width: fit-content;
+}
+
+.slogan-btn:hover {
+    background-color: #fff;
+}
+
+/* nav end */
+
+/* about section start */
+.about-section {
+    padding: 50px 0;
+}
+
+.about-left,
+.about-right {
+    width: 50%;
+}
+
+.about-left-small-heading {
+    color: var(--pink);
+}
+
+.about-left-heading {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.about-right p {
+    color: var(--gray);
+    line-height: 24px;
+}
+
+/* about image */
+.about-img {
+    padding: 50px 0;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text {
+    gap: 20px;
+}
+
+.about-text p {
+    color: var(--gray);
+    line-height: 24px;
+    text-align: center;
+}
+
+/* about section end */
+
+/* services-start */
+.services-txt-small-heading {
+    color: var(--pink);
+}
+
+.services-txt-heading {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+/* services cards */
+
+.services-cards-container {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.services-card {
+    width: calc(25% - 15px);
+    box-shadow: 0 0 10px #ddd;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+
+.services-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.services-card .services-card-heading {
+    color: var(--pink);
+    font-size: 20px;
+    padding: 20px;
+}
+
+.services-card-txt {
+    padding: 5px 20px 20px;
+    color: var(--gray);
+}
+
+.services-card:first-child {
+    top: 100px;
+}
+
+.services-card:nth-child(2),
+.services-card:nth-child(5) {
+    top: 50px;
+}
+
+.services-card:nth-child(4),
+.services-card:last-child {
+    top: -50px;
+}
+.services-card:hover{
+    box-shadow: 0 0 10px var(--pink);
+}
+/* services-end */
