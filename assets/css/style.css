@@ -252,6 +252,7 @@ main .slogan p {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.5s all ease-in-out;
+    background-color: white;
 }
 
 .services-card img {
@@ -287,3 +288,27 @@ main .slogan p {
     box-shadow: 0 0 10px var(--pink);
 }
 /* services-end */
+
+/* mission start */
+.mission-section{
+    height: 600px;
+    background-color: var(--pink);
+    padding-top: 50px;
+    clip-path: polygon(0 0, 100% 32%, 100% 100%, 0% 100%);
+    z-index: -1;
+    position: relative;
+    top: -150px;
+}
+.mission-txt-small-heading {
+    color: white;
+    margin-top: 200px;
+}
+
+.mission-txt-heading {
+    font-size: 50px;
+    margin-top: 10px;
+    color: white;
+}
+
+
+/* mission end */
