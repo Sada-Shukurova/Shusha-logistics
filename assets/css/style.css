@@ -253,6 +253,7 @@ main .slogan p {
     cursor: pointer;
     transition: 0.5s all ease-in-out;
     background-color: white;
+    z-index: 2;
 }
 
 .services-card img {
@@ -284,24 +285,41 @@ main .slogan p {
 .services-card:last-child {
     top: -50px;
 }
-.services-card:hover{
+
+.services-card:hover {
     box-shadow: 0 0 10px var(--pink);
 }
+
 /* services-end */
 
 /* mission start */
-.mission-section{
-    height: 600px;
+.mission-section {
     background-color: var(--pink);
     padding-top: 50px;
     clip-path: polygon(0 0, 100% 32%, 100% 100%, 0% 100%);
-    z-index: -1;
     position: relative;
     top: -150px;
+    padding-bottom: 70px;
 }
-.mission-txt-small-heading {
-    color: white;
-    margin-top: 200px;
+
+.mission-txt {
+    margin-bottom: 70px;
+}
+
+.mission-cards-container {
+    gap: 30px;
+}
+
+.mission-card {
+    background-color: white;
+    padding: 40px 30px 5px 30px;
+    color: black;
+    width: 30%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0 0 5px #f6f5f5;
+    gap: 20px;
 }
 
 .mission-txt-heading {
@@ -310,5 +328,216 @@ main .slogan p {
     color: white;
 }
 
+.mission-txt-small-heading {
+    color: white;
+    margin-top: 200px;
+}
+
+.mission-card:hover {
+    box-shadow: 0 0 20px #f6f5f5;
+}
+
+.mission-card img {
+    width: 95px;
+    height: 85px;
+    align-self: flex-end;
+}
+
+.mission-card-title {
+    color: var(--pink);
+    font-size: 20px;
+}
+
+.mission-card-txt {
+    line-height: 1.3;
+    font-size: 14px;
+    color:
+        rgba(52, 58, 62, 1);
+}
 
 /* mission end */
+
+/* team start */
+.team-section {
+    padding-bottom: 70px;
+}
+
+.team-small-heading {
+    color: var(--pink);
+}
+
+.team-heading {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.team-left,
+.team-right {
+    width: 50%;
+}
+
+.team-right {
+    margin-top: 35px;
+}
+
+.team-txt {
+    font-size: 14px;
+    color: rgba(52, 58, 62, 1);
+    line-height: 1.5;
+}
+
+.team-section img {
+    width: 100%;
+    margin-top: 70px;
+}
+
+/* team end */
+
+/* write us start */
+
+.writeUs .writeUsContent {
+    margin-top: 60px;
+}
+
+.writeUs-small-heading {
+    color: var(--pink);
+}
+
+.writeUsHeading {
+    font-size: 50px;
+    margin: 10px 0 70px 0;
+}
+
+.writeUsLeftSection,
+.writeUsRightSection {
+    width: 50%;
+}
+
+.writeUs-txt {
+    color: var(--gray);
+    line-height: 1.3;
+}
+
+.writeUsRightSection p {
+    font-size: 18px;
+}
+
+.writeUsRightSection {
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0 #77777740;
+    padding: 50px;
+    background-color: #fff;
+    z-index: 2;
+    transition: 0.4s all ease-in-out;
+}
+
+.writeUsRightSection:hover {
+    box-shadow: 0 0 10px var(--pink);
+}
+
+.writeUsRightSection a {
+    color: #000;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.socialMedia a {
+    color: var(--pink);
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+.socialMedia a i {
+    transition: 0.4s all ease-in-out;
+    border: 0.5px solid transparent;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socialMedia a:hover i {
+    box-shadow: 0 0 5px var(--pink);
+}
+
+/* write us end */
+
+
+/* footer start */
+footer {
+    background-color: var(--pink);
+    height: 900px;
+    margin-top: -150px;
+    position: relative;
+    color: black;
+    clip-path: polygon(0 26%, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+.footerTop {
+    height: 100%;
+    padding-top: 300px;
+}
+
+.footerSection {
+    background-color: white;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footerSection div a {
+    display: block;
+    color: var(--pink);
+    margin-bottom: 5px;
+}
+
+.footerBottom img,
+.footerText {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.footerText {
+    background-color: rgba(255, 255, 255, 0.911);
+    padding: 15px 0;
+    color: var(--pink);
+}
+
+.footerTop .footerSection a {
+    margin-bottom: 10px;
+}
+
+.footerTop .footerSection .footer-contact a {
+    margin-bottom: 15px;
+}
+
+.footer-nav a,
+.footer-contact a,
+.writeUsRightSection a {
+    position: relative;
+}
+
+.footer-nav a::after,
+.footer-contact a::after,
+.writeUsRightSection a::after {
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: var(--pink);
+    position: absolute;
+    bottom: -3px;
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.320, 1);
+    left: 0;
+}
+
+.footer-nav a:hover::after,
+.footer-contact a:hover::after,
+.writeUsRightSection a:hover::after {
+    width: 100%;
+}
+
+.socialMedia a::after {
+    display: none;
+}
+
+/* footer end */
